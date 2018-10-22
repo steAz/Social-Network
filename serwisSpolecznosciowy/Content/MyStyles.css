@@ -1,0 +1,450 @@
+﻿
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+h1 {
+    font-family: Forte;
+    font-style: initial;
+    font-size: 60px;
+    color: #003333;
+    text-align: center;
+    line-height: 0px;
+}
+
+    h1.second {
+        font-size: large;
+        color: goldenrod;
+        text-align: center;
+    }
+
+h2 {
+    font-family: 'Comic Sans MS';
+    font-style: normal;
+    color: #003333;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+h3 {
+    font-family: cooper;
+    font-style: normal;
+    color: darkorange;
+    font-size: x-large;
+    text-align: center;
+}
+
+h4 {
+    font-family: cooper;
+    font-style: normal;
+    color: red;
+    font-size: large;
+    text-align: center;
+}
+
+h5 {
+    font-family: cooper;
+    font-style: normal;
+    color: green;
+    font-size: large;
+    text-align: center;
+}
+
+
+    h3.estadio {
+        font-family: 'Comic Sans MS';
+        color: #FF6633;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h3.mail {
+        font-family: Book Antiqua;
+        font-style: normal;
+        color: maroon;
+        font-size: medium;
+        text-align: right;
+    }
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+}
+
+    ol a {
+        display: block;
+        color: #FF6633;
+        text-decoration: none;
+        padding: 0 5px;
+    }
+
+
+
+    ol > li > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 17px;
+        display: none;
+    }
+
+    ol > li:hover > ul {
+        display: block;
+    }
+
+
+    ol > li:hover > a {
+        color: maroon;
+        background-color: #99CCCC;
+    }
+
+
+
+    ol > li > ul > li > a {
+        background-color: #66CCCC;
+        position: relative;
+        border: 1px solid white;
+    }
+
+
+
+
+    ol > li > ul > li:hover > a {
+        background-color: #339999;
+        color: maroon;
+    }
+
+
+
+p {
+    color: #003333;
+    font-family: Arial;
+    font-size: large;
+    text-align: center;
+}
+
+    p.dodanieAtrakcji {
+        padding-left: 8cm;
+    }
+
+x {
+    padding-left: 8cm;
+    color: #003333;
+    font-family: Arial;
+    font-size: large;
+}
+
+p:first-letter {
+    color: #FF6633;
+    font-size: x-large;
+}
+
+
+#mapCanvas {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#dokument {
+    min-width: 100px;
+}
+
+#dokument2 {
+    /*min-width: 100px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;*/
+}
+
+#tloKlub {
+    background-image: url(aquapark.jpg);
+    background-size: 100%;
+}
+
+#tloKolor {
+    background-color: #F2FCFC;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#tloStadion {
+    background-image: url(stadion.jpg);
+    background-size: 100%;
+}
+
+#naglowek {
+    height: 250px;
+    position: relative;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #003333;
+    background-image: url(users.jpg);
+    background-size: 100%;
+}
+
+#menu {
+    height: 100px;
+    float: left;
+    height: 550px;
+    width: 280px;
+}
+
+#tresc {
+    position: relative;
+    padding: 80px;
+    height: auto;
+    overflow: auto;
+}
+
+#footer {
+    position: relative;
+    clear: both;
+    font-family: Times New Roman;
+    color: #FF6633;
+    font-size: 20px;
+    text-align: center;
+    background-color: #F2FCFC;
+    background-size: 100%;
+}
+
+#atrakcje {
+    margin: auto;
+    width: 50%;
+}
+
+.podpis {
+    font-family: 'Comic Sans MS';
+    color: #FF6633;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+td {
+    border: solid;
+    border-width: 2px;
+    background-color: white;
+    text-align: center;
+}
+
+
+th {
+    border: solid;
+    border-width: 4px;
+    text-align: left;
+}
+
+
+form {
+    font-family: Times New Roman;
+    font-size: 16px;
+    color: #FF9966;
+}
+
+    form.atrakcjeForm {
+        padding-left: 8cm;
+    }
+
+    form.dodanieAtrakcji {
+        padding-left: 8cm;
+    }
+
+th.kolorkolumny {
+    background-color: #FF6633;
+    font-family: Cooper;
+}
+
+tr#kolorwiersza {
+    background-color: #FF9966;
+    font-family: Forte;
+}
+
+
+
+
+
+
+
+
+
+/*DODANE DLA HISTORII (RESPONSYWNE STYLE CSS) */
+
+div.dok {
+    min-width: 100px;
+}
+
+
+header {
+    height: 300px;
+    position: relative;
+    border-bottom: 2px solid;
+    border-color: #003333;
+    border-top: 2px solid;
+    background-image: url(twarze.jpg);
+    background-size: 100%;
+}
+
+
+
+aside {
+    height: 100px;
+    float: left;
+    height: 550px;
+    width: 280px;
+}
+
+main {
+    position: relative;
+    padding: 80px;
+    height: auto;
+    overflow: auto;
+}
+
+
+footer {
+    position: relative;
+    clear: both;
+    font-family: Times New Roman;
+    color: #FF6633;
+    font-size: 20px;
+    text-align: center;
+    background-size: 100%;
+}
+
+
+
+
+/* przycisk do rozwijania menu domyślnie niewidoczny */
+aside span.expand {
+    display: none;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+
+    /*wykorzystanie całej szerokości ekranu*/
+    div.dok, header, main, aside, footer {
+        width: auto;
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+    }
+
+    /*kolumna z nawigacją wyświetlana jak standardowy element blokowy*/
+    aside {
+        float: none;
+    }
+
+        /*linki w menu domyślnie ukryte na urządzeniach mobilnych*/
+
+        aside nav {
+            display: none;
+        }
+
+        /*przycisk do rozwijania menu - widoczny tylko na urządzeniach mobilnych*/
+        aside span.expand {
+            display: inline-block;
+            float: right;
+            font-weight: normal;
+            font-size: 50px;
+            margin-top: -16px;
+        }
+
+        aside h2 {
+            margin: 0px;
+        }
+
+
+    /*ograniczenia miejsca zajmowanego przez część nagłówkową strony*/
+    h1 {
+        font-size: 30px;
+        line-height: 30px;
+        color: #FF6633;
+    }
+
+
+
+    header {
+        height: 60px;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+
+
+
+/*LOCAL AND SESSION STORAGE DLA KLUBU ( str glownej Klub.htm )*/
+
+#localKlub {
+    background-color: #FF6633;
+    border: 2px dashed #003333;
+    margin: 10px;
+    padding: 10px;
+    color: #66CCCC;
+    float: right;
+}
+
+#sessionKlub {
+    background-color: #66CCCC;
+    border: 2px dashed #003333;
+    margin: 10px;
+    padding: 10px;
+    color: #FF6633;
+    float: right;
+}
+
+#migotanie {
+    font-family: 'Comic Sans MS';
+    font-size: 40px;
+    text-align: center;
+}
+
+#resztaZaw {
+}
+
+#Text {
+    float: left;
+}
+
+#barwy {
+    border: 1px solid yellow;
+    width: 320px;
+    height: 130px;
+    position: relative;
+    left: 50px;
+    background-color: white;
+}

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+    @{
+        ViewBag.Title = "Error page";
+        Layout = "";
+    }
+    <body>
+        <div style=" padding:20px; color:red">
+            <h1>
+                @ViewBag.Title
+            </h1>
+            <h4>
+                404 Not found. The page you are looking for doesnt exist. Perhaps you need to login first.
+            </h4>
+            <h6>@Html.ActionLink("Go Back To Home Page", "Index", "Home")</h6>
+            <br />
+            <br />
+        </div>
+    </body>
+</html>
+

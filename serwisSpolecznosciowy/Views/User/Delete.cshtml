@@ -1,0 +1,41 @@
+﻿@model serwisSpolecznosciowy.Models.User
+
+@{
+    ViewBag.Title = "Delete Page";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>@Html.Label("Login:")</div>
+    <div>@Html.TextBox("login")</div>
+    <input type="submit" value="Delete" />
+}
+
+
+@if (ViewBag.DeleteResourceMessage == "DELETE ADMIN")
+{
+    <br />
+        <h4>@MyLanguageResources.ErrorDeleteAdmin</h4>
+}
+else if (ViewBag.DeleteResourceMessage == "USER DOESNT EXIST")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorUserDoesntExist</h4>
+}
+else if (ViewBag.DeleteResourceMessage == "EMPTY LOGIN INPUT")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorEmptyLoginInput</h4>
+}
+<div>
+    @Html.ActionLink("Back to Managing Page", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

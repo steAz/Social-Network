@@ -1,0 +1,48 @@
+﻿@model IEnumerable<serwisSpolecznosciowy.Models.User>
+
+@{
+    ViewBag.Title = "List of users Page";
+}
+<h2>@ViewBag.Title</h2>
+
+<h3>
+    @Html.ActionLink("Add new user", "Add", "User")
+    <br/>
+    @Html.ActionLink("Delete user", "Delete", "User")
+</h3>
+<table>
+    <tr id="kolorwiersza">
+        <th class="kolorkolumny">
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th class="kolorkolumny">
+            @Html.DisplayNameFor(model => model.DateOfCreation)
+        </th>
+        <th class="kolorkolumny">@Html.Label("Delete")</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr id="kolorwiersza">
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfCreation)
+        </td>
+        <td>
+            <button type="button" class="btn-block"
+                    onclick="location.href='@Url.Action("Delete", "User", new { login = item.Login })'">
+                Delete user
+            </button>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+<div>
+    @Html.ActionLink("Back to Managing Page", "Index", "Home")
+</div>

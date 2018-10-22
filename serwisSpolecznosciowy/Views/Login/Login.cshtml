@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Login Page";
+
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm())
+{
+    <div>@Html.Label("Login:")</div>
+    <div>@Html.TextBox("login")</div>
+    <input type="submit" value="Login" />
+}
+
+@if (ViewBag.LoginResourceError == "USER DOESNT EXIST")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorUserDoesntExist</h4>
+}
+else if(ViewBag.LoginResourceError == "EMPTY LOGIN INPUT")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorEmptyLoginInput</h4>
+}
+
+

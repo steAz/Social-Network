@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Import friends Page";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("ImportFriends", "Friends",
+                                    FormMethod.Post,
+                                    new { enctype = "multipart/form-data" }))
+{
+    <div>@Html.Label("File:")</div>
+    <input type="file" name="friendsTxt" id="usersTxtId" />
+    <input type="submit" value="ImportFriends" />
+}
+
+@if (ViewBag.FriendsImportResourceMessage == "WRONG FILE")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorImportWrongFile</h4>
+}
+else if (ViewBag.FriendsImportResourceMessage == "IMPORT SUCCESS")
+{
+    <br />
+    <h4>@MyLanguageResources.SuccessImportFriends</h4>
+}

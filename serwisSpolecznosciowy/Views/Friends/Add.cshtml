@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Friend Add Page";
+
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm())
+{
+    <div>@Html.Label("Login:")</div>
+    <div>@Html.TextBox("login")</div>
+    <input type="submit" value="Add" />
+}
+
+@if (ViewBag.FriendsAddResourceMessage == "USER DOESNT EXIST")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorUserDoesntExist</h4>
+}
+else if (ViewBag.FriendsAddResourceMessage == "EMPTY LOGIN INPUT")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorEmptyLoginInput</h4>
+}
+else if (ViewBag.FriendsAddResourceMessage == "FRIEND EXISTS")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorFriendExists</h4>
+}
+else if (ViewBag.FriendsAddResourceMessage == "ADD YOURSELF")
+{
+    <br />
+    <h4>@MyLanguageResources.ErrorFriendAddYourself</h4>
+}
+else if (ViewBag.FriendsAddResourceMessage == "FRIEND ADDED")
+{
+    <br />
+    <h5>@MyLanguageResources.SuccessFriendAdded</h5>
+}
+

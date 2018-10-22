@@ -1,0 +1,35 @@
+﻿@model IEnumerable<serwisSpolecznosciowy.Models.User>
+
+@{
+    ViewBag.Title = "List of friends Page";
+}
+<h2>@ViewBag.Title</h2>
+
+<h3>
+    @Html.ActionLink("Add friend", "Add", "Friends")
+</h3>
+<table>
+    <tr id="kolorwiersza">
+        <th class="kolorkolumny">
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th class="kolorkolumny">@Html.Label("Delete")</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr id="kolorwiersza">
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            <button type="button" class="btn-block" 
+                    onclick="location.href='@Url.Action("Delete", "Friends", new { login = item.Login })'">Delete friend</button>
+        </td>
+    </tr>
+}
+
+</table>
+<br/>
+<div>
+    @Html.ActionLink("Back to Managing Page", "Index", "Home")
+</div>
